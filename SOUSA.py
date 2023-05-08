@@ -36,8 +36,11 @@ df = df[df['state'] == state]
 
 fig = px.line(df, x="date", y=column, title=column + ' - ' + state)
 fig.update_layout( xaxis_title='Data', yaxis_title=column.upper(), title = {'x':0.5})
-colors = px.colors.qualitative.swatches()
-colors.show()
+fig = px.bar(player_nat,x='preferred_foot',y='sofifa_id',labels={
+    'preferred_foot': 'Novos casos - SP',
+    'sofifa_id': 'Data'
+},color_discrete_sequence=px.colors.qualitative.T10)
+fig.show()
 
 st.title('DADOS COVID-19')
 st.write('Nessa aplicação, o usuário tem a possibilidade de interação,e visualização de dados sobre  covid-19. Utilize o menu lateral para alterar a mostragem.')
