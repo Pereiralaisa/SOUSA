@@ -34,10 +34,8 @@ column = st.sidebar.selectbox('Qual tipo de informação?', colunas)
 df = df[df['state'] == state]
 df = px.data.iris()
  
-fig = px.bar(df, x="sepal_width", y="sepal_length", 
-             color="species", barmode="group", 
-             facet_row="species", facet_col="species_id")
- 
+fig = px.bar(df, x="sepal_width", y="sepal_length",
+             color="species", barmode = 'group')
 fig.show()
 
 #fig = px.line(df, x="data", y=column, title=column + ' - ' + state)
