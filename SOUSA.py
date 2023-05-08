@@ -36,7 +36,7 @@ df = px.data.iris()
  
 fig = px.bar(df, x = "sepal_width", y = "sepal_length")
 fig.show()
-fig = px.line(df, x="sepal_width", y=sepal_length, title=column + ' - ' + state)
+#fig = px.line(df, x="sepal_width", y=sepal_length, title=column + ' - ' + state)
 fig.update_layout( xaxis_title='Data', yaxis_title=column.upper(), title = {'x':0.5})
 
 st.title('DADOS COVID-19')
