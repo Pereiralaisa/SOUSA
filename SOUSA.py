@@ -37,7 +37,7 @@ df = px.data.iris()
  
 fig = px.bar(df, x = "sepal_width", y = "sepal_length")
 fig.show()
-fig.update_layout( sepal_width='data')
+
  
    
 
