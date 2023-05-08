@@ -10,6 +10,7 @@ Original file is located at
 import pandas as pd
 import plotly.express as px
 import streamlit as st 
+import numpy
 
 #streamlit run codigoBase.py
 
@@ -33,9 +34,16 @@ column = st.sidebar.selectbox('Qual tipo de informação?', colunas)
 
 df = df[df['state'] == state]
 
-
-fig = px.line(df, x="date", y=column, title=column + ' - ' + state)
-fig.update_layout( xaxis_title='Data', yaxis_title=column.upper(), title = {'x':0.5})
+ 
+np.random.seed(42) 
+   
+random_x= np.random.randint(1, 101, 100) 
+random_y= np.random.randint(1, 101, 100)
+ 
+fig = px.bar(random_x, y = random_y)
+fig.show()
+#fig = px.line(df, x="date", y=column, title=column + ' - ' + state)
+#fig.update_layout( xaxis_title='Data', yaxis_title=column.upper(), title = {'x':0.5})
 
 
 st.title('DADOS COVID-19')
