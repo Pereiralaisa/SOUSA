@@ -32,16 +32,12 @@ colunas = ['Número acumulado de casos','Novos casos','Número acumulado de óbi
 column = st.sidebar.selectbox('Qual tipo de informação?', colunas)
 
 
-#df = df[df['state'] == state]
-
-np.random.seed(41) 
+df = df[df['state'] == state]
+ 
    
-random_x= np.random.randint(1, 101, 100) 
-random_y= np.random.randint(1, 101, 100) 
-fig = px.bar(random_x, y = random_y)
-fig.show()
-#fig = px.line(df, x="date", y=column, title=column + ' - ' + state)
-#fig.update_layout( xaxis_title='Data', yaxis_title=column.upper(), title = {'x':0.5})
+
+fig = px.line(df, x="date", y=column, title=column + ' - ' + state)
+fig.update_layout( xaxis_title='Data', yaxis_title=column.upper(), title = {'x':0.5})
 
 
 st.title('DADOS COVID-19')
