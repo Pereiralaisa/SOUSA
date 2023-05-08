@@ -63,7 +63,7 @@ def response(change):
             g.layout.yaxis.title = 'Number of Delays'
 
 
-origin.observe(response, names="value")
+
 textbox.observe(response, names="value")
 month.observe(response, names="value")
 use_date.observe(response, names="value")
