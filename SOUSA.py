@@ -36,7 +36,7 @@ df = df[df['state'] == state]
 
 fig = px.line(df, x="date", y=column, title=column + ' - ' + state)
 fig.update_layout( xaxis_title='Data', yaxis_title=column.upper(), title = {'x':0.5})
-fig = px.bar(player_nat,x='preferred_foot',y='sofifa_id',labels={
+fig = px.bar(player_nat,x='date',y='column',labels={
     'preferred_foot': 'Novos casos - SP',
     'sofifa_id': 'Data'
 },color_discrete_sequence=px.colors.qualitative.T10)
