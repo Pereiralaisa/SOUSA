@@ -64,7 +64,7 @@ def response(change):
 
 
 
-textbox.observe(response, names="value")
+
 month.observe(response, names="value")
 use_date.observe(response, names="value")
 
