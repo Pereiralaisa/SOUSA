@@ -34,7 +34,6 @@ column = st.sidebar.selectbox('Qual tipo de informação?', colunas)
 
 df = df[df['state'] == state]
 
- 
 np.random.seed(42) 
    
 random_x= np.random.randint(1, 101, 100) 
