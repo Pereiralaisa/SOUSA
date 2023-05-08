@@ -75,6 +75,6 @@ def response(change):
 st.title('DADOS COVID-19')
 st.write('Nessa aplicação, o usuário tem a possibilidade de interação,e visualização de dados sobre  covid-19. Utilize o menu lateral para alterar a mostragem.')
 
-st.plotly_chart(fig, use_container_width=True)
+#st.plotly_chart(fig, use_container_width=True)
 
 st.caption('Projeto desenvolvido por alunos UNIVESP,PROJETO INTEGRADOR IV')
