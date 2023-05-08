@@ -65,8 +65,7 @@ def response(change):
 
 
 
-month.observe(response, names="value")
-use_date.observe(response, names="value")
+
 
 
 #fig = px.line(df, x="date", y=column, title=column + ' - ' + state)
