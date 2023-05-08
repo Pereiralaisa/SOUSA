@@ -32,7 +32,7 @@ colunas = ['Número acumulado de casos','Novos casos','Número acumulado de óbi
 column = st.sidebar.selectbox('Qual tipo de informação?', colunas)
 
 
-df = df[df['state'] == state]
+#df = df[df['state'] == state]
 
 np.random.seed(41) 
    
