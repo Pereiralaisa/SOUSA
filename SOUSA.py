@@ -37,12 +37,13 @@ df = df[df['state'] == state]
 df = px.data.tips()
 fig = px.histogram(df, x="total_bill")
 fig.update_layout( xaxis_title='Data', yaxis_title=column.upper(), title = {'x':0.5})
+ig = px.line(df, x="date", y=column, title=column + ' - ' + state)
 fig.show()
 
 
 
 
-#fig = px.line(df, x="date", y=column, title=column + ' - ' + state)
+fig = px.line(df, x="date", y=column, title=column + ' - ' + state)
 fig.update_layout( xaxis_title='Data', yaxis_title=column.upper(), title = {'x':0.5})
 
 
