@@ -34,41 +34,6 @@ column = st.sidebar.selectbox('Qual tipo de informação?', colunas)
 
 df = df[df['state'] == state]
 
-def validate():
-    if origin.value in df['origin'].unique() and textbox.value in df['carrier'].unique():
-        return True
-    else:
-        return False
-
-
-def response(change):
-    if validate():
-        if use_date.value:
-            filter_list = [i and j and k for i, j, k in
-                           zip(df['month'] == month.value, df['carrier'] == textbox.value,
-                               df['origin'] == origin.value)]
-            temp_df = df[filter_list]
-
-        else:
-            filter_list = [i and j for i, j in
-                           zip(df['carrier'] == 'DL', df['origin'] == origin.value)]
-            temp_df = df[filter_list]
-        x1 = temp_df['arr_delay']
-        x2 = temp_df['dep_delay']
-        with g.batch_update():
-            g.data[0].x = x1
-            g.data[1].x = x2
-            g.layout.barmode = 'overlay'
-            g.layout.xaxis.title = 'Delay in Minutes'
-            g.layout.yaxis.title = 'Number of Delays'
-            
-            
-origin.observe(response, names="value")
-textbox.observe(response, names="value")
-month.observe(response, names="value")
-use_date.observe(response, names="value")            
-
-
 
 
 
@@ -81,6 +46,6 @@ use_date.observe(response, names="value")
 st.title('DADOS COVID-19')
 st.write('Nessa aplicação, o usuário tem a possibilidade de interação,e visualização de dados sobre  covid-19. Utilize o menu lateral para alterar a mostragem.')
 
-#st.plotly_chart(fig, use_container_width=True)
+st.plotly_chart(fig, use_container_width=True)
 
 st.caption('Projeto desenvolvido por alunos UNIVESP,PROJETO INTEGRADOR IV')
