@@ -34,7 +34,9 @@ column = st.sidebar.selectbox('Qual tipo de informação?', colunas)
 
 df = df[df['state'] == state]
 
-
+df = px.data.tips()
+fig = px.histogram(df, x="total_bill")
+fig.show()
 
 
 
