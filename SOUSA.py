@@ -41,14 +41,11 @@ fig=px.pie(names=dados_x, values=dados_y, width=300, height=300)
 fig.show()
 
 #fig.update_layout( xaxis_title='Data', yaxis_title=column.upper(), title = {'x':0.5})
-fig = px.line(df, x="date", y=column, title=column + ' - ' + state)
+#fig = px.line(df, x="date", y=column, title=column + ' - ' + state)
 fig.show()
 
-
-
-
 #fig = px.line(df, x="date", y=column, title=column + ' - ' + state)
-fig.update_layout( xaxis_title='Data', yaxis_title=column.upper(), title = {'x':0.5})
+#fig.update_layout( xaxis_title='Data', yaxis_title=column.upper(), title = {'x':0.5})
 
 
 st.title('DADOS COVID-19')
