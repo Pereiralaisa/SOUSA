@@ -37,7 +37,7 @@ df = df[df['state'] == state]
 dados_x=['2020','2021']
 dados_y=[10,20,5,35]
 
-fig=px.pie(names=dados_x, values=dados_y, width=300, height=300)
+fig=px.pie(names=dados_x, values=dados_y, width=100, height=200)
 fig.show()
 
 #fig.update_layout( xaxis_title='Data', yaxis_title=column.upper(), title = {'x':0.5})
