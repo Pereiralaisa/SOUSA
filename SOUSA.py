@@ -35,7 +35,7 @@ column = st.sidebar.selectbox('Qual tipo de informação?', colunas)
 df = df[df['state'] == state]
 
 
-fig.update_layout( xaxis_title='Data', yaxis_title=column.upper(), title = {'x':0.5})
+#fig.update_layout( xaxis_title='Data', yaxis_title=column.upper(), title = {'x':0.5})
 fig = px.line(df, x="date", y=column, title=column + ' - ' + state)
 fig.show()
 
