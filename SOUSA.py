@@ -34,11 +34,14 @@ column = st.sidebar.selectbox('Qual tipo de informação?', colunas)
 
 df = df[df['state'] == state]
 
-dados_x=['2020','2021']
-dados_y=[10,20,5,35]
-
-fig=px.pie(names=dados_x, values=dados_y, width=100, height=200)
-fig.show()
+fig = px.bar(df_tests, # data frame com os dados
+            x = 'Ano', # coluna para os dados do eixo x
+            y = 'Total', # coluna para os dados do eixo y
+            barmode = 'group', # setando que o gráfico é do tipo group
+            color = 'SP', # setando a coluna que irá serparar as colunas dentro do grupo
+            hover_name = 'tests', # coluna para setar o titulo do hover
+            )
+pyo.offline.plot(fig, filename = "bar-plot-01.html"
 
 #fig.update_layout( xaxis_title='Data', yaxis_title=column.upper(), title = {'x':0.5})
 #fig = px.line(df, x="date", y=column, title=column + ' - ' + state)
