@@ -34,7 +34,7 @@ column = st.sidebar.selectbox('Qual tipo de informação?', colunas)
 
 df = df[df['state'] == state]
 
-random_x = [Testes Realizados] 
+random_x = ['tests'] 
 names = ['A', 'B', 'C'] 
   
 fig = px.pie(values=random_x, names=names) 
